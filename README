@@ -1,0 +1,24 @@
+MiniMiner One                            Copyright 2013 by Andreas Auer
+
+It is a single Avalon ASIC Bitcoin miner powered by the USB port. I 
+designed it as an initial project in the Bitcoin community.
+
+Subdirectories:
+
+- pcb:
+  This is the schematic and layout file for the PCB. You have to use
+  Cadsoft Eagle to open it.
+
+- firmware:
+  The firmware for the microcontroller is based on the LUFA USB stack
+  for Atmel microcontrollers.
+  To compile it, enter the LUFA-120730/Projects/AvalonBTC directory
+  and type "make". You need the avr-gcc to compile it.
+
+- bfgminer-driver:
+  This directory includes the driver files for bfgminer. You have to 
+  copy it to the bfgminer directory and modify the configure.ac file
+  to get it compiled. 
+  The driver is old and not compatible with an actual version of 
+  bfgminer. It was developed with bfgminer 3.1.x. To run it on a newer
+  version you have to modify it massively!
